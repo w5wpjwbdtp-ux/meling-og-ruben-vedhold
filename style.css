@@ -1,7 +1,7 @@
 :root {
   --primary: #060606;
   --secondary: #060606;
-  --text-dark: #000000;
+  --text-dark: #white;
   --text-light: #000000;
 }
 body {
