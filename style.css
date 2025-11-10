@@ -44,7 +44,7 @@ nav a:hover {
 
 /* Hero */
 #hero {
-  background: url('bilder/hero.jpg') center/cover no-repeat;
+  background: url('bilder_hero.jpg') center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 6rem 1rem;
