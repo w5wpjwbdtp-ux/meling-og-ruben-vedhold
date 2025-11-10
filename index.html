@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DN Vedlikehold – Bilvask & Maling</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>DN Vedlikehold</h1>
+      <nav>
+        <a href="#tjenester">Tjenester</a>
+        <a href="#om">Om oss</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div class="hero-content">
+      <h2>Ren bil, rent hjem – hele året</h2>
+      <p>Bilvask, høytrykksspyling, maling og vintervedlikehold med kvalitet og pålitelighet.</p>
+      <a href="#kontakt" class="btn">Kontakt oss</a>
+    </div>
+  </section>
+
+  <section id="tjenester" class="container">
+    <h2>Våre tjenester</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="bilder/bilvask.jpg" alt="Bilvask">
+        <h3>Bilvask</h3>
+        <p>Utvendig og innvendig bilvask utført med profesjonelt utstyr og nøye detaljer.</p>
+      </div>
+      <div class="card">
+        <img src="bilder/spyling.jpg" alt="Høytrykksspyling">
+        <h3>Høytrykksspyling</h3>
+        <p>Vi renser plattinger, gårdsrom og fasader for skitt, grønske og mose.</p>
+      </div>
+      <div class="card">
+        <img src="bilder/maling.jpg" alt="Maling">
+        <h3>Maling</h3>
+        <p>Vi maler rekkverk, gjerder og fasader med kvalitetsmaling som varer.</p>
+      </div>
+      <div class="card">
+        <img src="bilder/snomaaking.jpg" alt="Snømåking">
+        <h3>Snømåking</h3>
+        <p>Effektiv og pålitelig snømåking for private og bedrifter i vinterhalvåret.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="om" class="container">
+    <h2>Om oss</h2>
+    <p>DN Vedlikehold tilbyr helårstjenester innen bilvask, høytrykksspyling, maling og vintervedlikehold.
+      Vi legger vekt på nøyaktighet, pålitelighet og fornøyde kunder – uansett oppdragets størrelse.</p>
+  </section>
+
+  <section id="kontakt" class="container">
+    <h2>Kontakt oss</h2>
+    <p>Fyll ut skjemaet under for å få et uforpliktende tilbud.</p>
+
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <label for="navn">Navn</label>
+      <input type="text" id="navn" name="navn" required>
+
+      <label for="epost">E-post</label>
+      <input type="email" id="epost" name="epost" required>
+
+      <label for="tjeneste">Tjeneste</label>
+      <select id="tjeneste" name="tjeneste" required>
+        <option value="">Velg tjeneste</option>
+        <option value="bilvask">Bilvask</option>
+        <option value="spyling">Høytrykksspyling</option>
+        <option value="maling">Maling</option>
+        <option value="snomaaking">Snømåking</option>
+        <option value="annet">Annet</option>
+      </select>
+
+      <label for="melding">Melding</label>
+      <textarea id="melding" name="melding" rows="4" placeholder="Beskriv gjerne oppdraget ditt..."></textarea>
+
+      <button type="submit" class="btn">Send forespørsel</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 DN Vedlikehold. Alle rettigheter reservert.</p>
+  </footer>
+
+</body>
+</html>
