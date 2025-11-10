@@ -2,7 +2,7 @@
   --primary: #060606;
   --secondary: #060606;
   --text-dark: #f9f9f9;
-  --text-light: #f9f9f9;
+  --text-light: #000000;
 }
 body {
   margin: 0;
@@ -20,7 +20,7 @@ body {
 /* Header */
 header {
   background-color: var(--primary);
-  color: black;
+  color: white;
   padding: 1rem 0;
 }
 
