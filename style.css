@@ -78,7 +78,7 @@ nav a:hover {
 }
 
 .card {
-  background-color: var(--secondary);
+  background-color: var(white);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
