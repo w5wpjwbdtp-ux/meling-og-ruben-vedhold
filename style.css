@@ -6,6 +6,7 @@ body {
   line-height: 1.6;
 }
 
+/* Header og footer */
 header, footer {
   background: #333;
   color: #fff;
@@ -19,6 +20,7 @@ nav a {
   text-decoration: none;
 }
 
+/* Container */
 .container {
   width: 90%;
   max-width: 1000px;
@@ -30,7 +32,23 @@ h1, h2, h3 {
   margin-bottom: 0.5rem;
 }
 
-/* Boks for hver tjeneste */
+/* Hero-seksjon med bakgrunnsbilde */
+#hero {
+  background: url('bilder/hero-bilde.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff; /* hvit tekst over bildet */
+  padding: 5rem 1rem; /* mer plass for hero */
+  text-align: center;
+}
+
+#hero .hero-content {
+  background-color: rgba(0, 0, 0, 0.5); /* mørk overlay bak teksten for kontrast */
+  display: inline-block;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* Tjenestebokser */
 .tjeneste-boks {
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -54,17 +72,6 @@ h1, h2, h3 {
   display: block;
 }
 
-/* Hero-seksjon */
-.hero-content {
-  text-align: center;
-  padding: 3rem 1rem;
-  background-color: #f4f4f4;
-}
-
-.hero-content h2 {
-  margin-bottom: 1rem;
-}
-
 /* Skjema styling */
 form input, form select, form textarea, form button {
   width: 100%;
@@ -81,4 +88,9 @@ form input, form select, form textarea, form button {
   border: none;
   cursor: pointer;
   padding: 0.7rem;
+}
+
+/* Hero-tekst knapp */
+.hero-content .btn {
+  margin-top: 1rem;
 }
