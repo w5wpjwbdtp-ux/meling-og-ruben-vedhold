@@ -34,15 +34,15 @@ h1, h2, h3 {
 
 /* Hero-seksjon med bakgrunnsbilde */
 #hero {
-  background: url('bilder_hero.jpg') no-repeat center center;
+  background: url('hero-bilde.jpg') no-repeat center center;
   background-size: cover;
-  color: #fff; /* hvit tekst over bildet */
-  padding: 5rem 1rem; /* mer plass for hero */
+  color: #fff;
+  padding: 5rem 1rem;
   text-align: center;
 }
 
 #hero .hero-content {
-  background-color: rgba(0, 0, 0, 0.5); /* mørk overlay bak teksten for kontrast */
+  background-color: rgba(0, 0, 0, 0.5);
   display: inline-block;
   padding: 2rem;
   border-radius: 10px;
