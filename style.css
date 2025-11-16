@@ -34,7 +34,7 @@ h1, h2, h3 {
 
 /* Hero-seksjon med bakgrunnsbilde */
 #hero {
-  background: url('hero-bilde.jpg') no-repeat center center;
+  background: url('bilder_hero.jpg') no-repeat center center;
   background-size: cover;
   color: #fff;
   padding: 5rem 1rem;
