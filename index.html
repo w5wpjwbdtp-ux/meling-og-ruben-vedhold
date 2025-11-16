@@ -29,8 +29,17 @@
 
 <section id="tjenester" class="container">
 
+<script>
+  // Sett true/false for hvilke tjenester som skal vises
+  const visBilvask = true;
+  const visSpyling = true;
+  const visMaling = true;
+  const visSnomaaking = false; // Skjult om sommeren
+</script>
+
+<div id="tjeneste-container">
   <!-- Bilvask -->
-  <div class="tjeneste-boks">
+  <div class="tjeneste-boks" id="bilvask" style="display: none;">
     <h3>Bilvask</h3>
     <p>Utvendig og innvendig bilvask utført med profesjonelt utstyr og nøye detaljer.</p>
     <div class="bilde-boks">
@@ -40,7 +49,7 @@
   </div>
 
   <!-- Høytrykksspyling -->
-  <div class="tjeneste-boks">
+  <div class="tjeneste-boks" id="spyling" style="display: none;">
     <h3>Høytrykksspyling</h3>
     <p>Vi renser plattinger, gårdsrom og fasader for skitt, grønske og mose.</p>
     <div class="bilde-boks">
@@ -50,7 +59,7 @@
   </div>
 
   <!-- Maling -->
-  <div class="tjeneste-boks">
+  <div class="tjeneste-boks" id="maling" style="display: none;">
     <h3>Maling</h3>
     <p>Vi maler rekkverk, gjerder og fasader med kvalitetsmaling som varer.</p>
     <div class="bilde-boks">
@@ -60,7 +69,7 @@
   </div>
 
   <!-- Snømåking -->
-  <div class="tjeneste-boks">
+  <div class="tjeneste-boks" id="snomaaking" style="display: none;">
     <h3>Snømåking</h3>
     <p>Effektiv og pålitelig snømåking for private og bedrifter i vinterhalvåret.</p>
     <div class="bilde-boks">
@@ -68,6 +77,15 @@
       <img src="snomaaking_etter.jpg" alt="Etter snømåking">
     </div>
   </div>
+</div>
+
+<script>
+  // Skjuler/viser tjenestene basert på flaggene
+  if(visBilvask) document.getElementById('bilvask').style.display = 'block';
+  if(visSpyling) document.getElementById('spyling').style.display = 'block';
+  if(visMaling) document.getElementById('maling').style.display = 'block';
+  if(visSnomaaking) document.getElementById('snomaaking').style.display = 'block';
+</script>
 
 </section>
 
