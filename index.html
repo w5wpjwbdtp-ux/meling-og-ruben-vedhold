@@ -128,14 +128,32 @@
     <input type="email" id="epost" name="epost" required>
 
     <label for="tjeneste">Tjeneste</label>
-    <select id="tjeneste" name="tjeneste" required>
-      <option value="">Velg Tjeneste</option>
-      <option value="bilvask">Bilvask</option>
-      <option value="spyling">Høytrykksspyling</option>
-      <option value="maling">Maling</option>
-      <option value="snomaaking">Snømåking</option>
-      <option value="annet">Annet</option>
-    </select>
+<select id="tjeneste" name="tjeneste" required>
+  <!-- Alternativer fylles inn med JavaScript -->
+</select>
+
+<script>
+  // Flag for hvilke tjenester som skal vises på siden og i skjemaet
+  const tjenester = {
+    bilvask: { vis: true, navn: "Bilvask" },
+    spyling: { vis: true, navn: "Høytrykksspyling" },
+    maling: { vis: true, navn: "Maling" },
+    snomaaking: { vis: false, navn: "Snømåking" },
+    annet: { vis: true, navn: "Annet" }
+  };
+
+  // Fyll tjenestelisten i skjemaet dynamisk
+  const select = document.getElementById("tjeneste");
+  for (const key in tjenester) {
+    if (tjenester[key].vis) {
+      const option = document.createElement("option");
+      option.value = key;
+      option.textContent = tjenester[key].navn;
+      select.appendChild(option);
+    }
+  }
+</script>
+
 
     <label for="melding">Melding</label>
     <textarea id="melding" name="melding" rows="4" placeholder="Beskriv hva du trenger hjelp til, så svarer vi innen 24 timer..."></textarea>
