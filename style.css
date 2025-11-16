@@ -9,7 +9,7 @@ body {
 /* Header og footer */
 header, footer {
   background: #333;
-  color: #fff;
+  color: #000;
   text-align: center;
   padding: 1rem 0;
 }
