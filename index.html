@@ -8,36 +8,21 @@
 </head>
 <body>
 
-header .header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-header .logo img {
-  max-height: 60px; /* juster størrelsen på logoen */
-  margin-right: 1rem;
-}
-
-header .header-text h1 {
-  margin: 0;
-}
-
-header nav {
-  margin-top: 0.5rem;
-}
-
-@media (max-width: 768px) {
-  header .header-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  header nav {
-    margin-top: 1rem;
-  }
-}
-
+<header>
+  <div class="container header-container">
+    <div class="logo">
+      <img src="logo.jpg" alt="Meling & Reiersen Vedlikehold Logo">
+    </div>
+    <div class="header-text">
+      <h1>Meling & Reiersen Vedlikehold</h1>
+      <nav>
+        <a href="#tjenester">Tjenester</a>
+        <a href="#om">Om oss</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </div>
+</header>
 
 <section id="hero">
   <div class="hero-content">
