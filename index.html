@@ -5,117 +5,156 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meling & Reiersen Vedlikehold – Bilvask & Maling</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Enkel styling for før/etter-bilder */
+    .card {
+      margin: 2rem 0;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+    .before-after-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 1rem 0;
+    }
+    .before-after-container img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
+    .before-after-container .after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      clip-path: inset(0 50% 0 0); /* start på 50% */
+      transition: clip-path 0.2s;
+    }
+    .before-after-container .slider {
+      width: 100%;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
 
-  <header>
-    <div class="container">
-      <h1>Meling & Reiersen Vedlikehold</h1>
-      <nav>
-        <a href="#tjenester">Tjenester</a>
-        <a href="#om">Om oss</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="container">
+    <h1>Meling & Reiersen Vedlikehold</h1>
+    <nav>
+      <a href="#tjenester">Tjenester</a>
+      <a href="#om">Om oss</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
 
-  <section id="hero">
-    <div class="hero-content">
-      <h2>Ren bil, rent hjem – hele året</h2>
-      <p>Bilvask, høytrykksspyling, maling og vintervedlikehold med kvalitet og pålitelighet.</p>
-      <a href="#kontakt" class="btn">Kontakt oss</a>
-    </div>
-  </section>
+<section id="hero">
+  <div class="hero-content">
+    <h2>Ren bil, rent hjem – hele året</h2>
+    <p>Bilvask, høytrykksspyling, maling og vintervedlikehold med kvalitet og pålitelighet.</p>
+    <a href="#kontakt" class="btn">Kontakt oss</a>
+  </div>
+</section>
 
+<section id="tjenester" class="container">
+
+  <!-- Bilvask -->
   <div class="card">
-    <div class="before-after-wrapper">
-      <div class="before-after-container">
-        <img src="bilder_bilvask_for.jpg" class="before" alt="Før bilvask">
-        <img src="bilder_bilvask_etter.jpg" class="after" alt="Etter bilvask">
-        <input type="range" min="0" max="100" value="50" class="slider" 
-               oninput="this.previousElementSibling.style.clipPath=`inset(0 ${100-this.value}% 0 0)`">
-      </div>
-      <h3>Bilvask</h3>
-      <p>Utvendig og innvendig bilvask utført med profesjonelt utstyr og nøye detaljer.</p>
+    <h3>Bilvask</h3>
+    <p>Utvendig og innvendig bilvask utført med profesjonelt utstyr og nøye detaljer.</p>
+    <div class="before-after-container">
+      <img src="bilder/bilvask_for.jpg" alt="Før bilvask">
+      <img src="bilder/bilvask_etter.jpg" alt="Etter bilvask" class="after">
+      <input type="range" min="0" max="100" value="50" class="slider">
     </div>
   </div>
 
+  <!-- Høytrykksspyling -->
   <div class="card">
-    <div class="before-after-wrapper">
-      <div class="before-after-container">
-        <img src="bilder/spyling_for.jpg" class="before" alt="Før spyling">
-        <img src="bilder/spyling_etter.jpg" class="after" alt="Etter spyling">
-        <input type="range" min="0" max="100" value="50" class="slider" 
-               oninput="this.previousElementSibling.style.clipPath=`inset(0 ${100-this.value}% 0 0)`">
-      </div>
-      <h3>Høytrykksspyling</h3>
-      <p>Vi renser plattinger, gårdsrom og fasader for skitt, grønske og mose.</p>
+    <h3>Høytrykksspyling</h3>
+    <p>Vi renser plattinger, gårdsrom og fasader for skitt, grønske og mose.</p>
+    <div class="before-after-container">
+      <img src="bilder/spyling_for.jpg" alt="Før spyling">
+      <img src="bilder/spyling_etter.jpg" alt="Etter spyling" class="after">
+      <input type="range" min="0" max="100" value="50" class="slider">
     </div>
   </div>
 
+  <!-- Maling -->
   <div class="card">
-    <div class="before-after-wrapper">
-      <div class="before-after-container">
-        <img src="bilder/maling_for.jpg" class="before" alt="Før maling">
-        <img src="bilder/maling_etter.jpg" class="after" alt="Etter maling">
-        <input type="range" min="0" max="100" value="50" class="slider" 
-               oninput="this.previousElementSibling.style.clipPath=`inset(0 ${100-this.value}% 0 0)`">
-      </div>
-      <h3>Maling</h3>
-      <p>Vi maler rekkverk, gjerder og fasader med kvalitetsmaling som varer.</p>
+    <h3>Maling</h3>
+    <p>Vi maler rekkverk, gjerder og fasader med kvalitetsmaling som varer.</p>
+    <div class="before-after-container">
+      <img src="bilder/maling_for.jpg" alt="Før maling">
+      <img src="bilder/maling_etter.jpg" alt="Etter maling" class="after">
+      <input type="range" min="0" max="100" value="50" class="slider">
     </div>
   </div>
 
+  <!-- Snømåking -->
   <div class="card">
-    <div class="before-after-wrapper">
-      <div class="before-after-container">
-        <img src="bilder/snomaaking_for.jpg" class="before" alt="Før snømåking">
-        <img src="bilder/snomaaking_etter.jpg" class="after" alt="Etter snømåking">
-        <input type="range" min="0" max="100" value="50" class="slider" 
-               oninput="this.previousElementSibling.style.clipPath=`inset(0 ${100-this.value}% 0 0)`">
-      </div>
-      <h3>Snømåking</h3>
-      <p>Effektiv og pålitelig snømåking for private og bedrifter i vinterhalvåret.</p>
+    <h3>Snømåking</h3>
+    <p>Effektiv og pålitelig snømåking for private og bedrifter i vinterhalvåret.</p>
+    <div class="before-after-container">
+      <img src="bilder/snomaaking_for.jpg" alt="Før snømåking">
+      <img src="bilder/snomaaking_etter.jpg" alt="Etter snømåking" class="after">
+      <input type="range" min="0" max="100" value="50" class="slider">
     </div>
   </div>
 
-  <section id="om" class="container">
-    <h2>Om oss</h2>
-    <p>M&R Vedlikehold tilbyr helårstjenester innen bilvask, høytrykksspyling, maling og vintervedlikehold.
-      Vi legger vekt på nøyaktighet, pålitelighet og fornøyde kunder – uansett oppdragets størrelse.</p>
-  </section>
+</section>
 
-  <section id="kontakt" class="container">
-    <h2>Kontakt oss</h2>
-    <p>Fyll ut skjemaet under for å få et uforpliktende tilbud.</p>
+<section id="om" class="container">
+  <h2>Om oss</h2>
+  <p>M&R Vedlikehold tilbyr helårstjenester innen bilvask, høytrykksspyling, maling og vintervedlikehold.
+    Vi legger vekt på nøyaktighet, pålitelighet og fornøyde kunder – uansett oppdragets størrelse.</p>
+</section>
 
-    <form action="https://formspree.io/f/xjkjvvjw" method="POST">
-      <label for="navn">Navn</label>
-      <input type="text" id="navn" name="navn" required>
+<section id="kontakt" class="container">
+  <h2>Kontakt oss</h2>
+  <p>Fyll ut skjemaet under for å få et uforpliktende tilbud.</p>
 
-      <label for="epost">E-post</label>
-      <input type="email" id="epost" name="epost" required>
+  <form action="https://formspree.io/f/xjkjvvjw" method="POST">
+    <label for="navn">Navn</label>
+    <input type="text" id="navn" name="navn" required>
 
-      <label for="tjeneste">Tjeneste</label>
-      <select id="tjeneste" name="tjeneste" required>
-        <option value="">Velg Tjeneste</option>
-        <option value="bilvask">Bilvask</option>
-        <option value="spyling">Høytrykksspyling</option>
-        <option value="maling">Maling</option>
-        <option value="snomaaking">Snømåking</option>
-        <option value="annet">Annet</option>
-      </select>
+    <label for="epost">E-post</label>
+    <input type="email" id="epost" name="epost" required>
 
-      <label for="melding">Melding</label>
-      <textarea id="melding" name="melding" rows="4" placeholder="Beskriv hva du trenger hjelp til,  så svarer vi innen 24 timer..."></textarea>
+    <label for="tjeneste">Tjeneste</label>
+    <select id="tjeneste" name="tjeneste" required>
+      <option value="">Velg Tjeneste</option>
+      <option value="bilvask">Bilvask</option>
+      <option value="spyling">Høytrykksspyling</option>
+      <option value="maling">Maling</option>
+      <option value="snomaaking">Snømåking</option>
+      <option value="annet">Annet</option>
+    </select>
 
-      <button type="submit" class="btn">Send forespørsel</button>
-    </form>
-  </section>
+    <label for="melding">Melding</label>
+    <textarea id="melding" name="melding" rows="4" placeholder="Beskriv hva du trenger hjelp til,  så svarer vi innen 24 timer..."></textarea>
 
-  <footer>
-    <p>© 2025 Meling & Reiersen Vedlikehold. Alle rettigheter reservert.</p>
-  </footer>
+    <button type="submit" class="btn">Send forespørsel</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Meling & Reiersen Vedlikehold. Alle rettigheter reservert.</p>
+</footer>
+
+<script>
+  // Slider-funksjon
+  document.querySelectorAll('.before-after-container').forEach(container => {
+    const slider = container.querySelector('.slider');
+    const afterImg = container.querySelector('.after');
+
+    slider.addEventListener('input', () => {
+      afterImg.style.clipPath = `inset(0 ${100 - slider.value}% 0 0)`;
+    });
+  });
+</script>
 
 </body>
 </html>
