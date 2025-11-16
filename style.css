@@ -68,7 +68,7 @@ h1, h2, h3 {
 
 /* Hero-seksjon med bakgrunnsbilde */
 #hero {
-  background: url('hero-bilde.jpg') no-repeat center center;
+  background: url('hero_bilde.jpg') no-repeat center center;
   background-size: cover;
   color: #fff;
   padding: 5rem 1rem;
