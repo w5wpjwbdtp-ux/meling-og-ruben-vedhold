@@ -127,3 +127,19 @@ form input, form select, form textarea, form button {
 .hero-content .btn {
   margin-top: 1rem;
 }
+
+.bilde-boks {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: nowrap; /* hindrer linjeskift */
+  justify-content: space-between;
+}
+
+.bilde-boks img {
+  width: 50%;
+  min-width: 50%; /* tvinger to bilder per rad */
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+}
+
