@@ -6,6 +6,7 @@
   <title>Meling & Reiersen Vedlikehold – Tjenester</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
@@ -35,73 +36,49 @@
 <section id="tjenester" class="container">
 
 <script>
-  // Sett true/false for hvilke tjenester som skal vises
   const visBilvask = true;
   const visSpyling = true;
   const visMaling = false;
-  const visSnomaaking = false; // Skjult om sommeren
+  const visSnomaaking = false;
 </script>
 
 <div id="tjeneste-container">
-  
- <!-- Bilvask -->
+
 <div class="tjeneste-boks" id="bilvask" style="display: none;">
   <h3>Bilvask</h3>
   <p>Utvendig og innvendig bilvask utført med profesjonelt utstyr og nøye detaljer.</p>
-  
-  <!-- Biler -->
   <div class="bilde-boks">
     <img src="bil_før.jpg" alt="Før bilvask">
     <img src="bil_etter.jpg" alt="Etter bilvask">
   </div>
-
-  <!-- Felger -->
   <div class="bilde-boks">
     <img src="felger_før.jpg" alt="Før felgvask">
     <img src="felger_etter.jpg" alt="Etter felgvask">
   </div>
+</div>
 
-  <!-- Bakside bil -->
+<div class="tjeneste-boks" id="spyling" style="display: none;">
+  <h3>Høytrykksspyling</h3>
+  <p>Vi renser plattinger, gårdsrom og fasader for skitt, grønske og mose.</p>
   <div class="bilde-boks">
-    <img src="bakside_før.jpg" alt="Før bilvask bakside">
-    <img src="bakside_etter.jpg" alt="Etter bilvask bakside">
+    <img src="spyling_før.jpg" alt="Før spyling">
+    <img src="spyling_etter.jpg" alt="Etter spyling">
   </div>
 </div>
 
+<div class="tjeneste-boks" id="maling" style="display: none;">
+  <h3>Maling</h3>
+  <p>Vi maler rekkverk, gjerder og fasader med kvalitetsmaling som varer.</p>
+</div>
 
-  <!-- Høytrykksspyling -->
-  <div class="tjeneste-boks" id="spyling" style="display: none;">
-    <h3>Høytrykksspyling</h3>
-    <p>Vi renser plattinger, gårdsrom og fasader for skitt, grønske og mose.</p>
-    <div class="bilde-boks">
-      <img src="spyling_før.jpg" alt="Før spyling">
-      <img src="spyling_etter.jpg" alt="Etter spyling">
-    </div>
-  </div>
+<div class="tjeneste-boks" id="snomaaking" style="display: none;">
+  <h3>Snømåking</h3>
+  <p>Effektiv og pålitelig snømåking for private og bedrifter i vinterhalvåret.</p>
+</div>
 
-  <!-- Maling -->
-  <div class="tjeneste-boks" id="maling" style="display: none;">
-    <h3>Maling</h3>
-    <p>Vi maler rekkverk, gjerder og fasader med kvalitetsmaling som varer.</p>
-    <div class="bilde-boks">
-      <img src="maling_før.jpg" alt="Før maling">
-      <img src="maling_etter.jpg" alt="Etter maling">
-    </div>
-  </div>
-
-  <!-- Snømåking -->
-  <div class="tjeneste-boks" id="snomaaking" style="display: none;">
-    <h3>Snømåking</h3>
-    <p>Effektiv og pålitelig snømåking for private og bedrifter i vinterhalvåret.</p>
-    <div class="bilde-boks">
-      <img src="snomaaking_før.jpg" alt="Før snømåking">
-      <img src="snomaaking_etter.jpg" alt="Etter snømåking">
-    </div>
-  </div>
 </div>
 
 <script>
-  // Skjuler/viser tjenestene basert på flaggene
   if(visBilvask) document.getElementById('bilvask').style.display = 'block';
   if(visSpyling) document.getElementById('spyling').style.display = 'block';
   if(visMaling) document.getElementById('maling').style.display = 'block';
@@ -112,14 +89,11 @@
 
 <section id="om" class="container">
   <h2>Om oss</h2>
-  <p>M&R Vedlikehold tilbyr helårstjenester innen bilvask, høytrykksspyling, maling og vintervedlikehold.
-    Vi legger vekt på nøyaktighet, pålitelighet og fornøyde kunder – uansett oppdragets størrelse.</p>
+  <p>M&R Vedlikehold tilbyr helårstjenester innen bilvask, høytrykksspyling, maling og vintervedlikehold.</p>
 </section>
 
 <section id="kontakt" class="container">
   <h2>Kontakt oss</h2>
-  <p>Fyll ut skjemaet under for å få et uforpliktende tilbud.</p>
-
   <form action="https://formspree.io/f/xjkjvvjw" method="POST">
     <label for="navn">Navn</label>
     <input type="text" id="navn" name="navn" required>
@@ -128,36 +102,30 @@
     <input type="email" id="epost" name="epost" required>
 
     <label for="tjeneste">Tjeneste</label>
-<select id="tjeneste" name="tjeneste" required>
-  <!-- Alternativer fylles inn med JavaScript -->
-</select>
+    <select id="tjeneste" name="tjeneste" required></select>
 
-<script>
-  // Flag for hvilke tjenester som skal vises på siden og i skjemaet
-  const tjenester = {
-    bilvask: { vis: true, navn: "Bilvask" },
-    spyling: { vis: true, navn: "Høytrykksspyling" },
-    maling: { vis: false, navn: "Maling" },
-    snomaaking: { vis: false, navn: "Snømåking" },
-    annet: { vis: true, navn: "Annet" }
-  };
+    <script>
+      const tjenester = {
+        bilvask: { vis: true, navn: "Bilvask" },
+        spyling: { vis: true, navn: "Høytrykksspyling" },
+        maling: { vis: false, navn: "Maling" },
+        snomaaking: { vis: false, navn: "Snømåking" },
+        annet: { vis: true, navn: "Annet" }
+      };
 
-  // Fyll tjenestelisten i skjemaet dynamisk
-  const select = document.getElementById("tjeneste");
-  for (const key in tjenester) {
-    if (tjenester[key].vis) {
-      const option = document.createElement("option");
-      option.value = key;
-      option.textContent = tjenester[key].navn;
-      select.appendChild(option);
-    }
-  }
-</script>
-
+      const select = document.getElementById("tjeneste");
+      for (const key in tjenester) {
+        if (tjenester[key].vis) {
+          const option = document.createElement("option");
+          option.value = key;
+          option.textContent = tjenester[key].navn;
+          select.appendChild(option);
+        }
+      }
+    </script>
 
     <label for="melding">Melding</label>
-    <textarea id="melding" name="melding" rows="4" placeholder="Beskriv hva du trenger hjelp til, så svarer vi innen 24 timer..."></textarea>
-
+    <textarea id="melding" name="melding" rows="4"></textarea>
     <button type="submit" class="btn">Send forespørsel</button>
   </form>
 </section>
