@@ -1,4 +1,4 @@
-/* Import Google Font */
+/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 /* Generell styling */
@@ -20,18 +20,16 @@ header, footer {
   padding: 1rem 0;
 }
 
-/* Header container */
 header .header-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   width: 90%;
   max-width: 1000px;
   margin: auto;
   flex-wrap: nowrap;
 }
 
-/* Logo + tekst */
 header .logo-text {
   display: flex;
   align-items: center;
@@ -42,18 +40,12 @@ header .logo img {
   max-height: 50px;
 }
 
-header .header-text {
-  display: flex;
-  flex-direction: column;
-}
-
 header .header-text h1 {
   margin: 0;
   font-weight: 600;
   font-size: 1.5rem;
 }
 
-/* Navigasjon */
 header nav {
   display: flex;
   gap: 0.5rem;
@@ -73,7 +65,7 @@ header nav a:hover {
   background-color: #15F702;
 }
 
-/* Hero-seksjon */
+/* Hero */
 #hero {
   background: url('hero_bilde.jpg') no-repeat center center;
   background-size: cover;
@@ -113,33 +105,36 @@ header nav a:hover {
   padding: 2rem 0;
 }
 
-/* Tjenestebokser */
+/* Tjenester */
+.tjeneste-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+
 .tjeneste-boks {
+  flex: 1;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 1.5rem;
-  margin-bottom: 2rem;
   background-color: #f9f9f9;
 }
 
-/* To bilder side ved side */
+/* Bilder side ved side */
 .bilde-boks {
   display: flex;
   gap: 0.5rem;
-  flex-wrap: nowrap;
   justify-content: space-between;
   margin-bottom: 2rem;
 }
 
 .bilde-boks img {
   width: 50%;
-  min-width: 50%;
   border-radius: 10px;
-  display: block;
   object-fit: cover;
 }
 
-/* Skjema styling */
+/* Skjema */
 form input, form select, form textarea, form button {
   width: 100%;
   padding: 0.5rem;
@@ -149,13 +144,13 @@ form input, form select, form textarea, form button {
   box-sizing: border-box;
 }
 
-/* Calendly widget styling */
+/* Calendly */
 .calendly-inline-widget {
   min-width: 320px;
   height: 700px;
 }
 
-/* Mobilvennlig styling */
+/* RESPONSIV STYLING */
 @media (max-width: 768px) {
   /* Header */
   header .header-container {
@@ -187,17 +182,21 @@ form input, form select, form textarea, form button {
     font-size: 1rem;
   }
 
-  /* Bilde-boks brytes til kolonne */
+  /* Tjenester grid brytes til kolonne */
+  .tjeneste-grid {
+    flex-direction: column;
+  }
+
+  /* Bilder brytes til kolonne */
   .bilde-boks {
     flex-direction: column;
   }
 
   .bilde-boks img {
     width: 100%;
-    min-width: 100%;
   }
 
-  /* Calendly høyde på mobil */
+  /* Calendly widget høyde på mobil */
   .calendly-inline-widget {
     height: 800px;
   }
