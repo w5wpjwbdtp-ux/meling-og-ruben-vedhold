@@ -35,12 +35,9 @@
 </section>
 
 <section id="tjenester" class="container">
-
 <script>
   const visBilvask = true;
   const visSpyling = true;
-  const visMaling = false;
-  const visSnomaaking = false;
 </script>
 
 <div id="tjeneste-container">
@@ -72,8 +69,6 @@
 <script>
   if(visBilvask) document.getElementById('bilvask').style.display = 'block';
   if(visSpyling) document.getElementById('spyling').style.display = 'block';
-  if(visMaling) document.getElementById('maling').style.display = 'block';
-  if(visSnomaaking) document.getElementById('snomaaking').style.display = 'block';
 </script>
 
 </section>
@@ -84,7 +79,7 @@
 </section>
 
 <section id="kontakt" class="container">
-  <h2>Kontakt oss</h2>
+  <h2>Uforpliktende tilbud for høytrykkspyling</h2>
   <form action="https://formspree.io/f/xjkjvvjw" method="POST">
     <label for="navn">Navn</label>
     <input type="text" id="navn" name="navn" required>
@@ -99,8 +94,6 @@
       const tjenester = {
         bilvask: { vis: true, navn: "Bilvask" },
         spyling: { vis: true, navn: "Høytrykksspyling" },
-        maling: { vis: false, navn: "Maling" },
-        snomaaking: { vis: false, navn: "Snømåking" },
         annet: { vis: true, navn: "Annet" }
       };
 
