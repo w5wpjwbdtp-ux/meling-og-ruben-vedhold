@@ -3,130 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meling & Reiersen Vedlikehold – Tjenester</title>
+  <title>Meling & Reiersen Vedlikehold</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header>
-  <div class="container header-container">
-    <div class="logo">
-      <img src="logo.jpg" alt="Meling & Reiersen Vedlikehold Logo">
-    </div>
-    <div class="header-text">
-      <h1>Meling & Reiersen Vedlikehold</h1>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo-text">
+        <div class="logo">
+          <img src="logo.png" alt="Meling & Reiersen Logo">
+        </div>
+        <div class="header-text">
+          <h1>Meling & Reiersen Vedlikehold</h1>
+        </div>
+      </div>
       <nav>
         <a href="#tjenester">Tjenester</a>
-        <a href="#om">Om oss</a>
-        <a href="#Booking Høytykkspyling">Høytrykkspyling</a>
-        <a href="#booking Bilvask">Book time</a>
+        <a href="#om-oss">Om oss</a>
+        <a href="#hoytrykkspyling">Høytrykkspyling</a>
+        <a href="#booking">Book time</a>
       </nav>
     </div>
+  </header>
+
+  <!-- Hero-seksjon -->
+  <section id="hero">
+    <div class="hero-content">
+      <h2>Velkommen til Meling & Reiersen Vedlikehold</h2>
+      <p>Vi tilbyr profesjonell høytrykkspyling og vedlikeholdstjenester for private og bedrifter.</p>
+      <a href="#booking" class="btn">Book time</a>
+    </div>
+  </section>
+
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Tjenester -->
+    <section id="tjenester">
+      <h2>Våre tjenester</h2>
+      <div class="tjeneste-boks">
+        <h3>Høytrykkspyling</h3>
+        <p>Vi fjerner skitt og alger fra tak, fasader og uteområder med høytrykkspyling.</p>
+      </div>
+      <div class="tjeneste-boks">
+        <h3>Vedlikehold</h3>
+        <p>Regelmessig vedlikehold av bygg og uteområder sikrer lang levetid og trygghet.</p>
+      </div>
+    </section>
+
+    <!-- To bilder side ved side -->
+    <section class="bilde-boks">
+      <img src="bilde1.jpg" alt="Eksempel 1">
+      <img src="bilde2.jpg" alt="Eksempel 2">
+    </section>
+
+    <!-- Om oss -->
+    <section id="om-oss">
+      <h2>Om oss</h2>
+      <p>Meling & Reiersen Vedlikehold har lang erfaring med profesjonelt vedlikehold for både private og bedrifter.</p>
+    </section>
+
+    <!-- Skjema -->
+    <section id="kontakt">
+      <h2>Kontakt oss</h2>
+      <form>
+        <input type="text" placeholder="Navn" required>
+        <input type="email" placeholder="E-post" required>
+        <textarea placeholder="Melding" rows="5" required></textarea>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+
+    <!-- Booking -->
+    <section id="booking">
+      <h2>Book time</h2>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/dittbrukernavn/30min" style="min-width:320px;height:700px;"></div>
+    </section>
+
   </div>
-</header>
 
-<section id="hero">
-  <div class="hero-content">
-    <h2>Ren bil, rent hjem – hele året</h2>
-    <p>Bilvask, høytrykksspyling, maling og vintervedlikehold med kvalitet og pålitelighet.</p>
-    <a href="#kontakt" class="btn">Kontakt oss</a>
-  </div>
-</section>
-
-<section id="tjenester" class="container">
-<script>
-  const visBilvask = true;
-  const visSpyling = true;
-</script>
-
-<div id="tjeneste-container">
-
-<div class="tjeneste-boks" id="bilvask" style="display: none;">
-  <h3>Bilvask</h3>
-  <p>Utvendig og innvendig bilvask utført med profesjonelt utstyr og nøye detaljer.</p>
-  <div class="bilde-boks">
-    <img src="bil_før.jpg" alt="Før bilvask">
-    <img src="bil_etter.jpg" alt="Etter bilvask">
-  </div>
-  <div class="bilde-boks">
-    <img src="felger_før.jpg" alt="Før felgvask">
-    <img src="felger_etter.jpg" alt="Etter felgvask">
-  </div>
-</div>
-
-<div class="tjeneste-boks" id="spyling" style="display: none;">
-  <h3>Høytrykksspyling</h3>
-  <p>Vi renser plattinger, gårdsrom og fasader for skitt, grønske og mose.</p>
-  <div class="bilde-boks">
-    <img src="spyling_før.jpg" alt="Før spyling">
-    <img src="spyling_etter.jpg" alt="Etter spyling">
-  </div>
-</div>
-
-</div>
-
-<script>
-  if(visBilvask) document.getElementById('bilvask').style.display = 'block';
-  if(visSpyling) document.getElementById('spyling').style.display = 'block';
-</script>
-
-</section>
-
-<section id="om" class="container">
-  <h2>Om oss</h2>
-  <p>M&R Vedlikehold tilbyr helårstjenester innen bilvask, høytrykksspyling, maling og vintervedlikehold.</p>
-</section>
-
-<section id="kontakt" class="container">
-  <h2>Uforpliktende tilbud for høytrykkspyling</h2>
-  <form action="https://formspree.io/f/xjkjvvjw" method="POST">
-    <label for="navn">Navn</label>
-    <input type="text" id="navn" name="navn" required>
-
-    <label for="epost">E-post</label>
-    <input type="email" id="epost" name="epost" required>
-
-    <label for="tjeneste">Tjeneste</label>
-    <select id="tjeneste" name="tjeneste" required></select>
-
-    <script>
-      const tjenester = {
-        bilvask: { vis: false, navn: "Bilvask" },
-        spyling: { vis: true, navn: "Høytrykksspyling" },
-        annet: { vis: true, navn: "Annet" }
-      };
-
-      const select = document.getElementById("tjeneste");
-      for (const key in tjenester) {
-        if (tjenester[key].vis) {
-          const option = document.createElement("option");
-          option.value = key;
-          option.textContent = tjenester[key].navn;
-          select.appendChild(option);
-        }
-      }
-    </script>
-
-    <label for="melding">Melding</label>
-    <textarea id="melding" name="melding" rows="4"></textarea>
-    <button type="submit" class="btn">Send forespørsel</button>
-  </form>
-</section>
-
-<section id="booking" class="container">
-  <h2>Book time for bilvask</h2>
-
-  <!-- Calendly inline widget begin -->
-  <div class="calendly-inline-widget" data-url="https://calendly.com/marius_meling/30min" style="min-width:320px;height:700px;"></div>
-  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-  <!-- Calendly inline widget end -->
-
-</section>
-
-<footer>
-  <p>© 2025 Meling & Reiersen Vedlikehold. Alle rettigheter reservert.</p>
-</footer>
+  <footer>
+    <p>&copy; 2025 Meling & Reiersen Vedlikehold</p>
+  </footer>
 
 </body>
 </html>
