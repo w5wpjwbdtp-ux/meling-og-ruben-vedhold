@@ -17,28 +17,40 @@ header, footer {
   padding: 1rem 0;
 }
 
-/* Header med logo */
+/* Header med logo og tekst */
 header .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start; /* flytt alt mot venstre */
   flex-wrap: wrap;
   width: 90%;
   max-width: 1000px;
   margin: auto;
+  gap: 1rem; /* litt avstand mellom logo og tekst */
 }
 
 header .logo img {
-  max-height: 60px;
-  margin-right: 1rem;
+  max-height: 50px; /* mindre logo på mobil */
+}
+
+header .header-text {
+  display: flex;
+  flex-direction: column;
 }
 
 header .header-text h1 {
   margin: 0;
   font-weight: 600;
+  font-size: 1.5rem;
 }
 
 /* Navigasjon med rød bakgrunn og hvit tekst */
+header nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
 header nav a {
   color: #fff;
   margin: 0 0.5rem;
@@ -54,14 +66,26 @@ header nav a:hover {
   background-color: #15F702; /* lysere grønn ved hover */
 }
 
-/* Responsiv nav */
+/* Responsiv header på mobil */
 @media (max-width: 768px) {
   header .header-container {
-    flex-direction: column;
+    flex-direction: row; /* hold på samme linje */
     align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
   }
+
+  header .logo img {
+    max-height: 40px; /* mindre logo på mobil */
+  }
+
+  header .header-text h1 {
+    font-size: 1.2rem; /* mindre tekst på mobil */
+  }
+
   header nav {
-    margin-top: 1rem;
+    flex-wrap: wrap; /* navigasjon brytes til neste linje om nødvendig */
+    gap: 0.3rem;
   }
 }
 
